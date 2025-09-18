@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, TrendingUp, Shield, Brain, Car } from 'lucide-react';
+import { Github, TrendingUp, Shield, Brain, Car } from 'lucide-react';
 
 const projects = [
   {
@@ -98,16 +98,22 @@ const ProjectsSection = () => {
                         <Github className="w-4 h-4" />
                       </Button>
                     )}
-                    <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
                   </div>
                 </div>
                 
                 <div>
-                  <CardTitle className="text-xl mb-2 group-hover:gradient-text transition-all">
-                    {project.title}
-                  </CardTitle>
+                  {project.github ? (
+                    <CardTitle 
+                      className="text-xl mb-2 group-hover:gradient-text transition-all cursor-pointer hover:underline"
+                      onClick={() => window.open(project.github, '_blank')}
+                    >
+                      {project.title}
+                    </CardTitle>
+                  ) : (
+                    <CardTitle className="text-xl mb-2 group-hover:gradient-text transition-all">
+                      {project.title}
+                    </CardTitle>
+                  )}
                   <CardDescription className="text-base">
                     {project.description}
                   </CardDescription>
