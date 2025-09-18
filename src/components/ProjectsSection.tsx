@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, TrendingUp, Shield, Brain } from 'lucide-react';
+import { Github, ExternalLink, TrendingUp, Shield, Brain, Car } from 'lucide-react';
 
 const projects = [
   {
@@ -15,7 +15,8 @@ const projects = [
       "5-fold cross-validation with 91.8% consistent accuracy",
       "Reduced missing value errors by 100%"
     ],
-    gradient: "bg-gradient-primary"
+    gradient: "bg-gradient-primary",
+    github: "https://github.com/Harsh98245/-House-Price-Prediction-.git"
   },
   {
     title: "Fraud Detection System",
@@ -28,7 +29,23 @@ const projects = [
       "Improved model performance by 25% with feature engineering",
       "Calibrated probabilities for imbalanced data"
     ],
-    gradient: "bg-gradient-secondary"
+    gradient: "bg-gradient-secondary",
+    github: "https://github.com/Harsh98245/FraudDetection.git"
+  },
+  {
+    title: "Smart Parking Management",
+    description: "End-to-end parking management system using Python and Flask, enabling real-time monitoring of 500+ parking spots across campus.",
+    icon: Car,
+    stats: "500+ parking spots • 40% reduced search time • Real-time monitoring",
+    technologies: ["Python", "Flask", "SQLite", "HTML/CSS", "JavaScript"],
+    highlights: [
+      "Real-time monitoring of 500+ campus parking spots",
+      "Reduced parking search time by 40% during peak hours",
+      "Analytics dashboard for occupancy trends and optimization",
+      "Automated user role management for enhanced security"
+    ],
+    gradient: "bg-gradient-accent",
+    github: "https://github.com/Harsh98245/YorkuParkingSystem-.git"
   },
   {
     title: "IntelliAgent",
@@ -71,9 +88,16 @@ const ProjectsSection = () => {
                     <project.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
-                      <Github className="w-4 h-4" />
-                    </Button>
+                    {project.github && (
+                      <Button 
+                        variant="ghost" 
+                        size="icon" 
+                        className="opacity-0 group-hover:opacity-100 transition-opacity"
+                        onClick={() => window.open(project.github, '_blank')}
+                      >
+                        <Github className="w-4 h-4" />
+                      </Button>
+                    )}
                     <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
                       <ExternalLink className="w-4 h-4" />
                     </Button>
