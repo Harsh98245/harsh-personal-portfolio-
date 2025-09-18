@@ -1,0 +1,123 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Github, ExternalLink, TrendingUp, Shield, Brain } from 'lucide-react';
+
+const projects = [
+  {
+    title: "House Price Prediction",
+    description: "ML model predicting Canadian property prices with 92% accuracy using advanced feature engineering and ensemble methods.",
+    icon: TrendingUp,
+    stats: "1,460+ properties • 92% accuracy • $28k RMSE",
+    technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "Random Forest"],
+    highlights: [
+      "Engineered 10+ new features improving R² from 0.78 to 0.923",
+      "5-fold cross-validation with 91.8% consistent accuracy",
+      "Reduced missing value errors by 100%"
+    ],
+    gradient: "bg-gradient-primary"
+  },
+  {
+    title: "Fraud Detection System",
+    description: "End-to-end ML pipeline processing 5,000+ transactions with optimized fraud prevention algorithms.",
+    icon: Shield,
+    stats: "5,000+ transactions • 0.89 PR-AUC • 0.92 ROC-AUC",
+    technologies: ["Python", "XGBoost", "NumPy", "Matplotlib", "Seaborn"],
+    highlights: [
+      "Reduced false negatives by 20%",
+      "Improved model performance by 25% with feature engineering",
+      "Calibrated probabilities for imbalanced data"
+    ],
+    gradient: "bg-gradient-secondary"
+  },
+  {
+    title: "IntelliAgent",
+    description: "AI knowledge assistant using RAG architecture for company-specific information retrieval and summarization.",
+    icon: Brain,
+    stats: "RAG pipeline • OpenAI embeddings • Vector search",
+    technologies: ["Python", "LangChain", "OpenAI API", "Chroma", "FAISS"],
+    highlights: [
+      "Full RAG pipeline with context-aware responses",
+      "Optimized retriever-memory chains",
+      "Performance comparison: FAISS vs Chroma"
+    ],
+    gradient: "bg-primary"
+  }
+];
+
+const ProjectsSection = () => {
+  return (
+    <section className="py-24 relative">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            Featured <span className="gradient-text">Projects</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            From machine learning models to AI systems, here are some projects that showcase my journey in building intelligent solutions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+          {projects.map((project, index) => (
+            <Card 
+              key={project.title} 
+              className="glass hover-lift group cursor-pointer neon-border"
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
+              <CardHeader className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className={`p-3 rounded-lg ${project.gradient} glow-primary`}>
+                    <project.icon className="w-6 h-6 text-primary-foreground" />
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <Github className="w-4 h-4" />
+                    </Button>
+                    <Button variant="ghost" size="icon" className="opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ExternalLink className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </div>
+                
+                <div>
+                  <CardTitle className="text-xl mb-2 group-hover:gradient-text transition-all">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {project.description}
+                  </CardDescription>
+                </div>
+
+                <div className="text-sm text-accent font-mono">
+                  {project.stats}
+                </div>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <Badge key={tech} variant="secondary" className="text-xs">
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+
+                <ul className="space-y-2">
+                  {project.highlights.map((highlight, idx) => (
+                    <li key={idx} className="text-sm text-muted-foreground flex items-start">
+                      <span className="text-accent mr-2 mt-1">•</span>
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProjectsSection;
