@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, TrendingUp, Shield, Brain, Car } from 'lucide-react';
+import { Github, TrendingUp, Shield, Brain, Car, Heart } from 'lucide-react';
 
 const projects = [
   {
@@ -59,6 +59,21 @@ const projects = [
       "Performance comparison: FAISS vs Chroma"
     ],
     gradient: "bg-primary"
+  },
+  {
+    title: "CareBridge",
+    description: "Community care platform built during a hackathon, connecting users with essential services and enabling real-time support.",
+    icon: Heart,
+    stats: "100+ demo participants • <200ms response time • 40% engagement boost",
+    technologies: ["Node.js", "Express.js", "Socket.IO", "EJS", "HTML5", "CSS3", "JavaScript"],
+    highlights: [
+      "AI-powered chat support with real-time responses under 200ms",
+      "Secure donation system with multi-payment support and 100% transparency",
+      "Community features boosting engagement by 40% during the event",
+      "User registration, blogs, and resource sharing functionality"
+    ],
+    gradient: "bg-gradient-accent",
+    github: "https://github.com/wasayfaizan/ctrl-hack-dev.git"
   }
 ];
 
