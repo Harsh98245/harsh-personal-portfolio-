@@ -8,7 +8,8 @@ import {
   BarChart3, 
   Wrench,
   GraduationCap,
-  Briefcase
+  Briefcase,
+  ExternalLink
 } from 'lucide-react';
 
 const skillCategories = [
@@ -180,9 +181,17 @@ const SkillsSection = () => {
         {/* Certifications */}
         <div className="mt-12 text-center">
           <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="px-4 py-2 text-sm">
-              🎓 Machine Learning Specialization
-            </Badge>
+            <a 
+              href="https://www.coursera.org/account/accomplishments/verify/PQZVLQ2Y7N23"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:scale-105 transition-transform"
+            >
+              <Badge variant="outline" className="px-4 py-2 text-sm">
+                🎓 Machine Learning Specialization
+              </Badge>
+              <ExternalLink className="w-4 h-4 text-muted-foreground" />
+            </a>
             <Badge variant="outline" className="px-4 py-2 text-sm">
               🧠 Deep Learning Specialization (ongoing)
             </Badge>
