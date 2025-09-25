@@ -1,37 +1,114 @@
 import HeroSection from '@/components/HeroSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import SkillsSection from '@/components/SkillsSection';
+import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import Navigation from '@/components/Navigation';
+import { useEffect, useState } from 'react';
 
 const Index = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate page load
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <div className="text-center space-y-6">
+          <div className="w-16 h-16 border-4 border-primary/20 border-t-primary rounded-full animate-spin mx-auto"></div>
+          <div className="space-y-2">
+            <h2 className="text-2xl font-poppins font-bold gradient-text">Loading Portfolio</h2>
+            <p className="text-muted-foreground">Preparing the cosmic experience...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative">
       <Navigation />
       
-      <main>
+      <main className="space-y-0">
         <section id="hero">
           <HeroSection />
         </section>
-        <section id="projects" className="py-20">
-          <ProjectsSection />
+        
+        {/* Projects Section */}
+        <section id="projects" className="relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background"></div>
+          <div className="relative">
+            <ProjectsSection />
+          </div>
         </section>
-        <section id="skills" className="py-20 bg-secondary/30">
-          <SkillsSection />
+        
+        {/* Skills Section */}
+        <section id="skills" className="relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-card/20 to-background"></div>
+          <div className="relative">
+            <SkillsSection />
+          </div>
         </section>
-        <section id="contact" className="py-20">
-          <ContactSection />
+        
+        {/* Blog Section */}
+        <section id="blog" className="relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/5 to-background"></div>
+          <div className="relative">
+            <BlogSection />
+          </div>
+        </section>
+        
+        {/* Contact Section */}
+        <section id="contact" className="relative">
+          <div className="absolute inset-0 bg-gradient-to-b from-background to-muted/20"></div>
+          <div className="relative">
+            <ContactSection />
+          </div>
         </section>
       </main>
       
-      <footer className="border-t border-border bg-background">
-        <div className="container mx-auto px-6 py-8 text-center">
-          <p className="text-muted-foreground">
-            Built with React, TypeScript & Tailwind CSS
-          </p>
-          <p className="text-sm text-muted-foreground mt-2">
-            © 2024 Harsh Khandelwal. All rights reserved.
-          </p>
+      {/* Footer */}
+      <footer className="relative border-t border-border/50 bg-card/20 backdrop-blur-sm">
+        <div className="container mx-auto px-6 py-12">
+          <div className="text-center space-y-6">
+            <div className="space-y-4">
+              <h3 className="text-2xl font-poppins font-bold gradient-text">
+                Harsh Khandelwal
+              </h3>
+              <p className="text-muted-foreground max-w-md mx-auto">
+                Building the future with code, data, and innovation. 
+                Always learning, always creating.
+              </p>
+            </div>
+            
+            <div className="flex justify-center space-x-6">
+              <a href="https://github.com" className="text-muted-foreground hover:text-primary transition-colors">
+                GitHub
+              </a>
+              <a href="https://linkedin.com" className="text-muted-foreground hover:text-secondary transition-colors">
+                LinkedIn
+              </a>
+              <a href="mailto:harshkhandelwal129@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
+                Email
+              </a>
+            </div>
+            
+            <div className="pt-6 border-t border-border/30">
+              <p className="text-sm text-muted-foreground">
+                Built with React, TypeScript & Tailwind CSS
+              </p>
+              <p className="text-xs text-muted-foreground mt-2">
+                © 2024 Harsh Khandelwal. All rights reserved.
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

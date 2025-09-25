@@ -10,6 +10,7 @@ const Navigation = () => {
     { name: 'Home', href: '#hero', icon: Home },
     { name: 'Projects', href: '#projects', icon: FolderOpen },
     { name: 'Skills', href: '#skills', icon: Code },
+    { name: 'Blog', href: '#blog', icon: Code },
     { name: 'Contact', href: '#contact', icon: Mail },
   ];
 
@@ -28,12 +29,12 @@ const Navigation = () => {
           <Button 
             variant="outline" 
             size="icon" 
-            className="bg-background/80 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all"
+            className="glass border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 hover:scale-105"
           >
             <Menu className="h-4 w-4" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-80 bg-background/95 backdrop-blur-sm border-border">
+        <SheetContent side="right" className="w-80 glass-strong border-border/50">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-xl font-semibold text-foreground">Navigation</h2>
             <Button 
