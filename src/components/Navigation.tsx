@@ -22,50 +22,50 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-4 right-4 z-50">
+    <nav className="fixed top-6 right-6 z-50">
       <Sheet open={isOpen} onOpenChange={setIsOpen}>
         <SheetTrigger asChild>
           <Button 
             variant="outline" 
             size="icon" 
-            className="glass hover-lift bg-background/20 border-primary/20 hover:border-primary/40"
+            className="bg-background/80 backdrop-blur-sm border shadow-lg hover:shadow-xl transition-all"
           >
             <Menu className="h-4 w-4" />
           </Button>
         </SheetTrigger>
-        <SheetContent side="right" className="w-80 glass border-primary/20">
+        <SheetContent side="right" className="w-80 bg-background/95 backdrop-blur-sm border-border">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-xl font-bold gradient-text">Navigation</h2>
+            <h2 className="text-xl font-semibold text-foreground">Navigation</h2>
             <Button 
               variant="ghost" 
               size="icon" 
               onClick={() => setIsOpen(false)}
-              className="hover:bg-primary/10"
+              className="hover:bg-muted"
             >
               <X className="h-4 w-4" />
             </Button>
           </div>
           
-          <div className="space-y-4">
+          <div className="space-y-2">
             {navItems.map((item) => (
               <Button
                 key={item.name}
                 variant="ghost"
-                className="w-full justify-start text-left hover:bg-primary/10 hover:text-primary transition-all group"
+                className="w-full justify-start text-left hover:bg-muted transition-colors"
                 onClick={() => scrollToSection(item.href)}
               >
-                <item.icon className="mr-3 h-5 w-5 group-hover:scale-110 transition-transform" />
+                <item.icon className="mr-3 h-5 w-5" />
                 <span className="text-base">{item.name}</span>
               </Button>
             ))}
           </div>
           
           <div className="absolute bottom-8 left-6 right-6">
-            <div className="text-center">
-              <p className="text-sm text-muted-foreground mb-2">
+            <div className="text-center border-t border-border pt-4">
+              <p className="text-sm text-muted-foreground mb-1">
                 Harsh Khandelwal
               </p>
-              <p className="text-xs text-muted-foreground/60">
+              <p className="text-xs text-muted-foreground">
                 Full Stack Developer
               </p>
             </div>

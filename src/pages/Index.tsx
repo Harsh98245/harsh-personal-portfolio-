@@ -6,36 +6,30 @@ import Navigation from '@/components/Navigation';
 
 const Index = () => {
   return (
-    <div className="relative overflow-hidden">
-      {/* Animated Background Grid */}
-      <div className="fixed inset-0 bg-grid-pattern opacity-5 pointer-events-none" />
-      
-      {/* Navigation */}
+    <div className="relative">
       <Navigation />
       
-      {/* Main Content */}
       <main>
         <section id="hero">
           <HeroSection />
         </section>
-        <section id="projects">
+        <section id="projects" className="py-20">
           <ProjectsSection />
         </section>
-        <section id="skills">
+        <section id="skills" className="py-20 bg-secondary/30">
           <SkillsSection />
         </section>
-        <section id="contact">
+        <section id="contact" className="py-20">
           <ContactSection />
         </section>
       </main>
       
-      {/* Footer */}
-      <footer className="border-t border-border/20 bg-background/80 backdrop-blur-sm">
+      <footer className="border-t border-border bg-background">
         <div className="container mx-auto px-6 py-8 text-center">
           <p className="text-muted-foreground">
-            Built with ❤️ using React, TypeScript & Tailwind CSS
+            Built with React, TypeScript & Tailwind CSS
           </p>
-          <p className="text-sm text-muted-foreground/60 mt-2">
+          <p className="text-sm text-muted-foreground mt-2">
             © 2024 Harsh Khandelwal. All rights reserved.
           </p>
         </div>
