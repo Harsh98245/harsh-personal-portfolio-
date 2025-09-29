@@ -58,18 +58,24 @@ const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-2xl md:text-4xl font-inter font-light text-muted-foreground leading-relaxed">
-                Data Scientist & <span className="gradient-analytics">ML Engineer</span>
+                Developer & <span className="gradient-analytics">Problem Solver</span>
               </p>
             </div>
           </div>
 
           {/* Description */}
           <div className={`max-w-4xl mx-auto space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-inter font-light">
-              Passionate about building <span className="text-primary font-medium">innovative solutions</span> with modern technologies.
-              I specialize in <span className="text-secondary font-medium">full-stack development</span> and{' '}
-              <span className="text-accent font-medium">machine learning</span>, creating applications that make a real impact.
-            </p>
+            <div className="space-y-6 text-xl md:text-2xl text-muted-foreground leading-relaxed font-inter font-light">
+              <p>
+                It all began with curiosity, a fascination with data, code, and the endless possibilities of technology. Through late nights of debugging, moments of small victories, and lessons from setbacks, every project has taught me patience, creativity, and resilience.
+              </p>
+              <p>
+                This website is my canvas to share that journey: the projects I have built, the challenges I have faced, the breakthroughs I have celebrated, and the impact I aspire to create. It is a space where ideas turn into action and learning transforms into building.
+              </p>
+              <p>
+                Join me as I continue to explore, create, and grow, because the journey of building something meaningful is where the real magic happens.
+              </p>
+            </div>
           </div>
 
           {/* Action buttons */}
