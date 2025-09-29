@@ -4,61 +4,62 @@
 
 @layer base {
   :root {
-    /* Space Theme Color Palette */
-    --background: 220 27% 4%;
-    --foreground: 220 13% 91%;
+    /* Data Science Theme - Light & Professional */
+    --background: 210 40% 98%;
+    --foreground: 210 40% 8%;
     
-    /* Primary - Cosmic Blue */
-    --primary: 220 91% 65%;
-    --primary-foreground: 220 27% 4%;
-    --primary-glow: 220 91% 75%;
+    /* Primary - Data Blue */
+    --primary: 210 100% 56%;
+    --primary-foreground: 210 40% 98%;
+    --primary-light: 210 100% 85%;
     
-    /* Secondary - Deep Purple */
-    --secondary: 260 84% 55%;
-    --secondary-foreground: 220 13% 91%;
-    --secondary-glow: 260 84% 65%;
+    /* Secondary - Analytics Purple */
+    --secondary: 250 95% 76%;
+    --secondary-foreground: 210 40% 8%;
+    --secondary-light: 250 95% 90%;
     
-    /* Accent - Stellar Gold */
-    --accent: 42 96% 58%;
-    --accent-foreground: 220 27% 4%;
-    --accent-glow: 42 96% 68%;
+    /* Accent - ML Teal */
+    --accent: 180 100% 42%;
+    --accent-foreground: 210 40% 98%;
+    --accent-light: 180 100% 85%;
     
     /* Neutral Colors */
-    --muted: 220 27% 8%;
-    --muted-foreground: 220 9% 46%;
-    --popover: 220 27% 6%;
-    --popover-foreground: 220 13% 91%;
-    --card: 220 27% 6%;
-    --card-foreground: 220 13% 91%;
+    --muted: 210 40% 95%;
+    --muted-foreground: 210 40% 45%;
+    --popover: 210 40% 99%;
+    --popover-foreground: 210 40% 8%;
+    --card: 210 40% 99%;
+    --card-foreground: 210 40% 8%;
     
     /* Borders & Input */
-    --border: 220 27% 12%;
-    --input: 220 27% 8%;
-    --ring: 220 91% 65%;
+    --border: 210 40% 90%;
+    --input: 210 40% 96%;
+    --ring: 210 100% 56%;
     
     /* Destructive */
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 220 13% 91%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
     
-    /* Special Colors */
-    --nebula-pink: 320 91% 65%;
-    --cosmic-teal: 180 91% 65%;
-    --stellar-orange: 25 91% 65%;
+    /* Data Visualization Colors */
+    --chart-1: 210 100% 56%;
+    --chart-2: 250 95% 76%;
+    --chart-3: 180 100% 42%;
+    --chart-4: 25 95% 53%;
+    --chart-5: 340 82% 52%;
     
     /* Layout */
-    --radius: 12px;
+    --radius: 8px;
     
     /* Gradients */
-    --gradient-cosmic: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    --gradient-nebula: linear-gradient(135deg, hsl(var(--nebula-pink)), hsl(var(--primary)));
-    --gradient-stellar: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--stellar-orange)));
-    --gradient-deep-space: linear-gradient(180deg, hsl(var(--background)), hsl(220 27% 2%));
+    --gradient-data: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--secondary-light)));
+    --gradient-analytics: linear-gradient(135deg, hsl(var(--secondary-light)), hsl(var(--accent-light)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(210 40% 96%));
+    --gradient-chart: linear-gradient(45deg, hsl(var(--chart-1) / 0.1), hsl(var(--chart-2) / 0.1));
     
     /* Effects */
-    --glow-primary: 0 0 20px hsl(var(--primary) / 0.3);
-    --glow-secondary: 0 0 20px hsl(var(--secondary) / 0.3);
-    --glow-accent: 0 0 20px hsl(var(--accent) / 0.3);
-    --shadow-cosmic: 0 25px 50px -12px hsl(var(--primary) / 0.15);
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.08);
+    --shadow-card: 0 2px 10px hsl(var(--foreground) / 0.05);
+    --shadow-interactive: 0 8px 30px hsl(var(--primary) / 0.12);
     
     /* Animation Timings */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,9 +75,35 @@
   body {
     @apply bg-background text-foreground font-inter;
     background-image: 
-      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--secondary) / 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 40% 80%, hsl(var(--accent) / 0.02) 0%, transparent 50%);
+      /* Data visualization patterns */
+      linear-gradient(45deg, transparent 40%, hsl(var(--primary) / 0.02) 50%, transparent 60%),
+      linear-gradient(-45deg, transparent 40%, hsl(var(--secondary) / 0.02) 50%, transparent 60%),
+      /* Neural network nodes */
+      radial-gradient(circle at 15% 25%, hsl(var(--chart-1) / 0.04) 0%, transparent 30%),
+      radial-gradient(circle at 85% 75%, hsl(var(--chart-2) / 0.04) 0%, transparent 30%),
+      radial-gradient(circle at 70% 20%, hsl(var(--chart-3) / 0.03) 0%, transparent 25%),
+      radial-gradient(circle at 30% 80%, hsl(var(--accent) / 0.03) 0%, transparent 25%),
+      /* Subtle grid pattern */
+      linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(hsl(var(--border)) 1px, transparent 1px);
+    background-size: 
+      100px 100px,
+      100px 100px,
+      200px 200px,
+      300px 300px,
+      250px 250px,
+      180px 180px,
+      50px 50px,
+      50px 50px;
+    background-position:
+      0 0,
+      25px 25px,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0,
+      0 0;
   }
   
   html {
@@ -89,68 +116,73 @@
 }
 
 @layer components {
-  /* Glass morphism effect */
-  .glass {
-    @apply bg-card/40 backdrop-blur-sm border border-border/50;
+  /* Modern card effects */
+  .data-card {
+    @apply bg-card/80 backdrop-blur-sm border border-border shadow-card rounded-lg;
+    transition: var(--transition-smooth);
   }
   
-  /* Enhanced glass with stronger effect */
-  .glass-strong {
-    @apply bg-card/60 backdrop-blur-md border border-border/70;
+  .data-card:hover {
+    @apply shadow-interactive;
+    transform: translateY(-2px);
   }
   
   /* Gradient text effects */
-  .gradient-text {
-    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
-  }
-  
-  .gradient-cosmic {
+  .gradient-data {
     @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
   
-  .gradient-stellar {
-    @apply bg-gradient-to-r from-accent to-stellar-orange bg-clip-text text-transparent;
+  .gradient-analytics {
+    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
   }
   
-  /* Glow effects */
-  .glow-primary {
-    box-shadow: var(--glow-primary);
+  .gradient-chart {
+    @apply bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent;
   }
   
-  .glow-secondary {
-    box-shadow: var(--glow-secondary);
-  }
-  
-  .glow-accent {
-    box-shadow: var(--glow-accent);
-  }
-  
-  /* Interactive hover effects */
-  .hover-glow:hover {
-    @apply glow-primary;
-    transform: translateY(-2px);
+  /* Interactive elements */
+  .interactive-element {
     transition: var(--transition-smooth);
   }
   
-  .hover-lift {
-    transition: var(--transition-smooth);
+  .interactive-element:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-interactive);
   }
   
-  .hover-lift:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: var(--shadow-cosmic);
-  }
-  
-  /* Animated background patterns */
-  .star-field {
+  /* Data visualization background */
+  .data-bg {
     background-image: 
-      radial-gradient(2px 2px at 20px 30px, hsl(var(--foreground) / 0.3), transparent),
-      radial-gradient(2px 2px at 40px 70px, hsl(var(--primary) / 0.4), transparent),
-      radial-gradient(1px 1px at 90px 40px, hsl(var(--accent) / 0.3), transparent),
-      radial-gradient(1px 1px at 130px 80px, hsl(var(--secondary) / 0.3), transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: twinkle 20s linear infinite;
+      /* Chart lines */
+      linear-gradient(45deg, transparent 30%, hsl(var(--chart-1) / 0.05) 50%, transparent 70%),
+      linear-gradient(-45deg, transparent 30%, hsl(var(--chart-2) / 0.05) 50%, transparent 70%),
+      /* Data points */
+      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.03) 0%, transparent 20%),
+      radial-gradient(circle at 80% 70%, hsl(var(--secondary) / 0.03) 0%, transparent 20%),
+      radial-gradient(circle at 60% 40%, hsl(var(--accent) / 0.02) 0%, transparent 15%);
+    background-size: 120px 120px, 120px 120px, 300px 300px, 250px 250px, 200px 200px;
+  }
+  
+  /* Neural network visualization */
+  .neural-bg {
+    background-image: 
+      /* Connection lines */
+      linear-gradient(30deg, transparent 48%, hsl(var(--primary) / 0.08) 50%, transparent 52%),
+      linear-gradient(60deg, transparent 48%, hsl(var(--secondary) / 0.06) 50%, transparent 52%),
+      linear-gradient(120deg, transparent 48%, hsl(var(--accent) / 0.04) 50%, transparent 52%),
+      /* Nodes */
+      radial-gradient(circle at 25% 25%, hsl(var(--chart-1) / 0.1) 0%, transparent 8%),
+      radial-gradient(circle at 75% 25%, hsl(var(--chart-2) / 0.1) 0%, transparent 8%),
+      radial-gradient(circle at 25% 75%, hsl(var(--chart-3) / 0.1) 0%, transparent 8%),
+      radial-gradient(circle at 75% 75%, hsl(var(--chart-4) / 0.1) 0%, transparent 8%);
+    background-size: 
+      150px 150px, 
+      180px 180px, 
+      200px 200px,
+      100px 100px,
+      120px 120px,
+      110px 110px,
+      130px 130px;
   }
   
   /* Loading animations */
@@ -182,14 +214,23 @@
 }
 
 @layer utilities {
-  /* Custom colors */
-  .text-stellar-orange { color: hsl(var(--stellar-orange)); }
-  .text-nebula-pink { color: hsl(var(--nebula-pink)); }
-  .text-cosmic-teal { color: hsl(var(--cosmic-teal)); }
+  /* Data visualization colors */
+  .text-chart-1 { color: hsl(var(--chart-1)); }
+  .text-chart-2 { color: hsl(var(--chart-2)); }
+  .text-chart-3 { color: hsl(var(--chart-3)); }
+  .text-chart-4 { color: hsl(var(--chart-4)); }
+  .text-chart-5 { color: hsl(var(--chart-5)); }
   
-  .bg-stellar-orange { background-color: hsl(var(--stellar-orange)); }
-  .bg-nebula-pink { background-color: hsl(var(--nebula-pink)); }
-  .bg-cosmic-teal { background-color: hsl(var(--cosmic-teal)); }
+  .bg-chart-1 { background-color: hsl(var(--chart-1)); }
+  .bg-chart-2 { background-color: hsl(var(--chart-2)); }
+  .bg-chart-3 { background-color: hsl(var(--chart-3)); }
+  .bg-chart-4 { background-color: hsl(var(--chart-4)); }
+  .bg-chart-5 { background-color: hsl(var(--chart-5)); }
+  
+  /* Mathematical equation styling */
+  .equation {
+    @apply font-mono text-sm text-muted-foreground bg-muted/30 px-2 py-1 rounded;
+  }
 }
 
 /* Keyframe animations */

@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Github, Linkedin, Mail, Sparkles, Code, Database } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, BarChart3, Brain, TrendingUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import dataScienceBg from '@/assets/data-science-bg.jpg';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,38 +20,49 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0 star-field"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5"></div>
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: `url(${dataScienceBg})` }}
+      ></div>
+      <div className="absolute inset-0 neural-bg opacity-20"></div>
       
-      {/* Floating elements */}
-      <div className="absolute top-20 left-10 opacity-30">
-        <Code className="w-6 h-6 text-primary animate-float" style={{ animationDelay: '0s' }} />
+      {/* Floating data elements */}
+      <div className="absolute top-20 left-10 opacity-40">
+        <BarChart3 className="w-8 h-8 text-chart-1 animate-float" style={{ animationDelay: '0s' }} />
       </div>
-      <div className="absolute top-40 right-20 opacity-30">
-        <Database className="w-8 h-8 text-secondary animate-float" style={{ animationDelay: '2s' }} />
+      <div className="absolute top-40 right-20 opacity-40">
+        <Brain className="w-10 h-10 text-chart-2 animate-float" style={{ animationDelay: '2s' }} />
       </div>
-      <div className="absolute bottom-32 left-16 opacity-30">
-        <Sparkles className="w-5 h-5 text-accent animate-float" style={{ animationDelay: '4s' }} />
+      <div className="absolute bottom-32 left-16 opacity-40">
+        <TrendingUp className="w-6 h-6 text-chart-3 animate-float" style={{ animationDelay: '4s' }} />
+      </div>
+      
+      {/* Mathematical equations */}
+      <div className="absolute top-1/4 left-1/4 equation opacity-30 animate-float" style={{ animationDelay: '1s' }}>
+        f(x) = Σ(wi*xi)
+      </div>
+      <div className="absolute bottom-1/4 right-1/4 equation opacity-30 animate-float" style={{ animationDelay: '3s' }}>
+        ∇J(θ) = α∇θ
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="max-w-5xl mx-auto space-y-12">
           {/* Main content */}
           <div className={`space-y-8 transition-all duration-1000 ${isVisible ? 'fade-in-up' : 'opacity-0 translate-y-10'}`}>
-            <Badge variant="outline" className="mb-4 px-4 py-2 text-sm font-medium border-primary/20 text-primary animate-pulse-glow">
-              Available for opportunities
+            <Badge variant="outline" className="mb-4 px-4 py-2 text-sm font-medium border-primary/30 text-primary bg-primary/5">
+              Available for Data Science Roles
             </Badge>
             
             <div className="space-y-6">
               <h1 className="text-5xl md:text-8xl font-poppins font-bold leading-tight">
                 Hi, I'm{' '}
-                <span className="gradient-text block md:inline">
-                  Harsh Khandelwal
+                <span className="gradient-data block md:inline">
+                  Muhammad Taha
                 </span>
               </h1>
               <p className="text-2xl md:text-4xl font-inter font-light text-muted-foreground leading-relaxed">
-                Full Stack Developer & <span className="gradient-cosmic">ML Enthusiast</span>
+                Data Scientist & <span className="gradient-analytics">ML Engineer</span>
               </p>
             </div>
           </div>
@@ -69,9 +81,9 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               onClick={scrollToProjects}
-              className="group bg-gradient-to-r from-primary to-secondary hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-medium"
+              className="group bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-medium data-card"
             >
-              View My Work
+              View My Portfolio
               <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
             
@@ -80,7 +92,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg" 
                 asChild 
-                className="glass border-border/50 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 hover:scale-105"
+                className="data-card border-primary/20 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 hover:scale-105"
               >
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Github className="w-5 h-5" />
@@ -91,7 +103,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg" 
                 asChild 
-                className="glass border-border/50 hover:border-secondary/50 hover:bg-secondary/5 transition-all duration-300 hover:scale-105"
+                className="data-card border-secondary/20 hover:border-secondary/40 hover:bg-secondary/5 transition-all duration-300 hover:scale-105"
               >
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Linkedin className="w-5 h-5" />
@@ -102,7 +114,7 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg" 
                 asChild 
-                className="glass border-border/50 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300 hover:scale-105"
+                className="data-card border-accent/20 hover:border-accent/40 hover:bg-accent/5 transition-all duration-300 hover:scale-105"
               >
                 <a href="mailto:harshkhandelwal129@gmail.com" className="flex items-center gap-2">
                   <Mail className="w-5 h-5" />
