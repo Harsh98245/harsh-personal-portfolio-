@@ -4,67 +4,48 @@
 
 @layer base {
   :root {
-    /* AI/ML Dark Theme - Data Science Professional */
-    --background: 222 47% 5%;
+    --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
     
-    /* Primary - AI Blue */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 11%;
-    --primary-glow: 210 100% 70%;
-    
-    /* Secondary - Neural Purple */
-    --secondary: 270 60% 55%;
-    --secondary-foreground: 210 40% 98%;
-    
-    /* Accent - Data Green */
-    --accent: 160 70% 50%;
-    --accent-foreground: 222 47% 11%;
-    
-    /* Neutral Colors */
-    --muted: 217 33% 18%;
-    --muted-foreground: 215 20% 65%;
-    --popover: 224 40% 8%;
-    --popover-foreground: 210 40% 98%;
-    --card: 224 40% 8%;
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
     
-    /* Borders & Input */
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 217 91% 60%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
     
-    /* Destructive */
-    --destructive: 0 63% 31%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-light: 217.2 91.2% 70%;
+    
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-light: 217.2 32.6% 25%;
+    
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --accent-light: 217.2 32.6% 25%;
+    
+    --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     
-    /* Data Visualization Colors - AI/ML Theme */
-    --chart-1: 217 91% 60%;     /* AI Blue */
-    --chart-2: 160 70% 50%;     /* Data Green */
-    --chart-3: 270 60% 55%;     /* Neural Purple */
-    --chart-4: 340 82% 52%;     /* Alert Red */
-    --chart-5: 47 96% 53%;      /* Warning Yellow */
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
     
-    /* Layout */
-    --radius: 8px;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
     
-    /* AI/ML Gradients */
-    --gradient-data: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-analytics: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--chart-3)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--chart-2)));
-    --gradient-neural: linear-gradient(135deg, hsl(var(--chart-3)), hsl(var(--primary)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(222 47% 3%));
+    --radius: 0.5rem;
     
-    /* Glowing Effects */
-    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.2);
-    --shadow-card: 0 2px 10px hsl(var(--primary) / 0.1);
-    --shadow-interactive: 0 8px 30px hsl(var(--primary) / 0.4);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
-    --shadow-neural: 0 8px 32px hsl(var(--secondary) / 0.3);
-    
-    /* Animation Timings */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --gradient-primary: linear-gradient(135deg, hsl(217.2 91.2% 59.8%), hsl(217.2 91.2% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(217.2 32.6% 17.5%), hsl(217.2 32.6% 25%));
+    --gradient-background: linear-gradient(to bottom, hsl(222.2 84% 4.9%), hsl(222.2 84% 3%));
   }
 }
 
