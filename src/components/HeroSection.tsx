@@ -20,12 +20,13 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background image */}
+      {/* Background image with overlay */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${dataScienceBg})` }}
       ></div>
-      <div className="absolute inset-0 neural-bg opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/90"></div>
+      <div className="absolute inset-0 neural-bg opacity-30"></div>
       
       {/* Floating data elements */}
       <div className="absolute top-20 left-10 opacity-40">

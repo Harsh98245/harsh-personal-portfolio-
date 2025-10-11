@@ -4,62 +4,63 @@
 
 @layer base {
   :root {
-    /* Data Science Theme - Light & Professional */
-    --background: 210 40% 98%;
-    --foreground: 210 40% 8%;
+    /* AI/ML Dark Theme - Data Science Professional */
+    --background: 222 47% 5%;
+    --foreground: 210 40% 98%;
     
-    /* Primary - Data Blue */
-    --primary: 210 100% 56%;
-    --primary-foreground: 210 40% 98%;
-    --primary-light: 210 100% 85%;
+    /* Primary - AI Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+    --primary-glow: 210 100% 70%;
     
-    /* Secondary - Analytics Purple */
-    --secondary: 250 95% 76%;
-    --secondary-foreground: 210 40% 8%;
-    --secondary-light: 250 95% 90%;
+    /* Secondary - Neural Purple */
+    --secondary: 270 60% 55%;
+    --secondary-foreground: 210 40% 98%;
     
-    /* Accent - ML Teal */
-    --accent: 180 100% 42%;
-    --accent-foreground: 210 40% 98%;
-    --accent-light: 180 100% 85%;
+    /* Accent - Data Green */
+    --accent: 160 70% 50%;
+    --accent-foreground: 222 47% 11%;
     
     /* Neutral Colors */
-    --muted: 210 40% 95%;
-    --muted-foreground: 210 40% 45%;
-    --popover: 210 40% 99%;
-    --popover-foreground: 210 40% 8%;
-    --card: 210 40% 99%;
-    --card-foreground: 210 40% 8%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
+    --popover: 224 40% 8%;
+    --popover-foreground: 210 40% 98%;
+    --card: 224 40% 8%;
+    --card-foreground: 210 40% 98%;
     
     /* Borders & Input */
-    --border: 210 40% 90%;
-    --input: 210 40% 96%;
-    --ring: 210 100% 56%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 217 91% 60%;
     
     /* Destructive */
-    --destructive: 0 84% 60%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
     
-    /* Data Visualization Colors */
-    --chart-1: 210 100% 56%;
-    --chart-2: 250 95% 76%;
-    --chart-3: 180 100% 42%;
-    --chart-4: 25 95% 53%;
-    --chart-5: 340 82% 52%;
+    /* Data Visualization Colors - AI/ML Theme */
+    --chart-1: 217 91% 60%;     /* AI Blue */
+    --chart-2: 160 70% 50%;     /* Data Green */
+    --chart-3: 270 60% 55%;     /* Neural Purple */
+    --chart-4: 340 82% 52%;     /* Alert Red */
+    --chart-5: 47 96% 53%;      /* Warning Yellow */
     
     /* Layout */
     --radius: 8px;
     
-    /* Gradients */
-    --gradient-data: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--secondary-light)));
-    --gradient-analytics: linear-gradient(135deg, hsl(var(--secondary-light)), hsl(var(--accent-light)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(210 40% 96%));
-    --gradient-chart: linear-gradient(45deg, hsl(var(--chart-1) / 0.1), hsl(var(--chart-2) / 0.1));
+    /* AI/ML Gradients */
+    --gradient-data: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-analytics: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--chart-3)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--chart-2)));
+    --gradient-neural: linear-gradient(135deg, hsl(var(--chart-3)), hsl(var(--primary)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(222 47% 3%));
     
-    /* Effects */
-    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.08);
-    --shadow-card: 0 2px 10px hsl(var(--foreground) / 0.05);
-    --shadow-interactive: 0 8px 30px hsl(var(--primary) / 0.12);
+    /* Glowing Effects */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 2px 10px hsl(var(--primary) / 0.1);
+    --shadow-interactive: 0 8px 30px hsl(var(--primary) / 0.4);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+    --shadow-neural: 0 8px 32px hsl(var(--secondary) / 0.3);
     
     /* Animation Timings */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,36 +75,9 @@
   
   body {
     @apply bg-background text-foreground font-inter;
-    background-image: 
-      /* Data visualization patterns */
-      linear-gradient(45deg, transparent 40%, hsl(var(--primary) / 0.02) 50%, transparent 60%),
-      linear-gradient(-45deg, transparent 40%, hsl(var(--secondary) / 0.02) 50%, transparent 60%),
-      /* Neural network nodes */
-      radial-gradient(circle at 15% 25%, hsl(var(--chart-1) / 0.04) 0%, transparent 30%),
-      radial-gradient(circle at 85% 75%, hsl(var(--chart-2) / 0.04) 0%, transparent 30%),
-      radial-gradient(circle at 70% 20%, hsl(var(--chart-3) / 0.03) 0%, transparent 25%),
-      radial-gradient(circle at 30% 80%, hsl(var(--accent) / 0.03) 0%, transparent 25%),
-      /* Subtle grid pattern */
-      linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px),
-      linear-gradient(hsl(var(--border)) 1px, transparent 1px);
-    background-size: 
-      100px 100px,
-      100px 100px,
-      200px 200px,
-      300px 300px,
-      250px 250px,
-      180px 180px,
-      50px 50px,
-      50px 50px;
-    background-position:
-      0 0,
-      25px 25px,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0,
-      0 0;
+    background: linear-gradient(to bottom, hsl(var(--background)), hsl(222 47% 3%));
+    position: relative;
+    min-height: 100vh;
   }
   
   html {
@@ -116,28 +90,55 @@
 }
 
 @layer components {
-  /* Modern card effects */
+  /* AI/ML card effects with glow */
   .data-card {
     @apply bg-card/80 backdrop-blur-sm border border-border shadow-card rounded-lg;
     transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .data-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
   }
   
   .data-card:hover {
-    box-shadow: var(--shadow-interactive);
+    box-shadow: var(--shadow-glow);
     transform: translateY(-2px);
+    border-color: hsl(var(--primary) / 0.6);
   }
   
-  /* Gradient text effects */
+  .data-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* AI/ML Gradient text with glow effects */
   .gradient-data {
-    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+    background: var(--gradient-data);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px hsl(var(--primary-glow) / 0.3));
   }
   
   .gradient-analytics {
-    @apply bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent;
+    background: var(--gradient-neural);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px hsl(var(--secondary) / 0.3));
   }
   
   .gradient-chart {
-    @apply bg-gradient-to-r from-chart-1 to-chart-2 bg-clip-text text-transparent;
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   /* Interactive elements */
@@ -150,39 +151,31 @@
     box-shadow: var(--shadow-interactive);
   }
   
-  /* Data visualization background */
+  /* AI/ML data visualization background */
   .data-bg {
-    background-image: 
-      /* Chart lines */
-      linear-gradient(45deg, transparent 30%, hsl(var(--chart-1) / 0.05) 50%, transparent 70%),
-      linear-gradient(-45deg, transparent 30%, hsl(var(--chart-2) / 0.05) 50%, transparent 70%),
-      /* Data points */
-      radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.03) 0%, transparent 20%),
-      radial-gradient(circle at 80% 70%, hsl(var(--secondary) / 0.03) 0%, transparent 20%),
-      radial-gradient(circle at 60% 40%, hsl(var(--accent) / 0.02) 0%, transparent 15%);
-    background-size: 120px 120px, 120px 120px, 300px 300px, 250px 250px, 200px 200px;
+    background: 
+      radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(var(--secondary) / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, hsl(var(--accent) / 0.1) 0%, transparent 50%);
+    animation: pulse-glow 8s ease-in-out infinite;
   }
   
-  /* Neural network visualization */
+  /* Neural network visualization with enhanced glow */
   .neural-bg {
     background-image: 
-      /* Connection lines */
-      linear-gradient(30deg, transparent 48%, hsl(var(--primary) / 0.08) 50%, transparent 52%),
-      linear-gradient(60deg, transparent 48%, hsl(var(--secondary) / 0.06) 50%, transparent 52%),
-      linear-gradient(120deg, transparent 48%, hsl(var(--accent) / 0.04) 50%, transparent 52%),
-      /* Nodes */
-      radial-gradient(circle at 25% 25%, hsl(var(--chart-1) / 0.1) 0%, transparent 8%),
-      radial-gradient(circle at 75% 25%, hsl(var(--chart-2) / 0.1) 0%, transparent 8%),
-      radial-gradient(circle at 25% 75%, hsl(var(--chart-3) / 0.1) 0%, transparent 8%),
-      radial-gradient(circle at 75% 75%, hsl(var(--chart-4) / 0.1) 0%, transparent 8%);
-    background-size: 
-      150px 150px, 
-      180px 180px, 
-      200px 200px,
-      100px 100px,
-      120px 120px,
-      110px 110px,
-      130px 130px;
+      linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      radial-gradient(circle at 30% 40%, hsl(var(--secondary) / 0.05), transparent 70%),
+      radial-gradient(circle at 70% 60%, hsl(var(--primary) / 0.05), transparent 70%);
+    background-size: 50px 50px, 50px 50px, 100% 100%, 100% 100%;
+    position: relative;
+  }
+  
+  .neural-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 0%, hsl(var(--background) / 0.9) 100%);
   }
   
   /* Loading animations */
