@@ -4,34 +4,8 @@ import SkillsSection from '@/components/SkillsSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import Navigation from '@/components/Navigation';
-import { useEffect, useState } from 'react';
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate page load
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-background">
-        <div className="text-center space-y-6">
-          <div className="w-16 h-16 border-4 border-primary/20 border-t-primary rounded-full animate-spin mx-auto"></div>
-          <div className="space-y-2">
-            <h2 className="text-2xl font-poppins font-bold gradient-text">Loading Portfolio</h2>
-            <p className="text-muted-foreground">Preparing the cosmic experience...</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="relative">
       <Navigation />
