@@ -62,16 +62,28 @@ const experience = {
       "Database Management", "Operating Systems", "Theory of Computation"
     ]
   },
-  work: {
-    title: "Paperchase Business Services Ltd.",
-    subtitle: "Data Analyst Intern",
-    period: "May 2024 - Aug 2024",
-    achievements: [
-      "Reduced manual reporting effort by 30% with ETL workflows",
-      "Designed interactive dashboards for real-time KPI tracking",
-      "Cleaned and transformed large datasets using Python and SQL"
-    ]
-  }
+  workExperiences: [
+    {
+      title: "Artificial Intelligence Club at York University",
+      subtitle: "Artificial Intelligence Researcher",
+      period: "Sept 2024 - Present",
+      achievements: [
+        "Collaborated with peers to develop data-driven and AI-powered solutions addressing real-world challenges (Current Project: IntelliAgent - an AI knowledge assistant)",
+        "Designed and prototyped machine learning models and chat-based systems, contributing to innovative project outcomes",
+        "Participated in coding workshops and collaborative sessions to enhance AI proficiency and promote technical knowledge sharing within the club"
+      ]
+    },
+    {
+      title: "Paperchase Business Services Ltd.",
+      subtitle: "Data Analyst Intern",
+      period: "May 2024 - Aug 2024",
+      achievements: [
+        "Reduced manual reporting effort by 30% with ETL workflows",
+        "Designed interactive dashboards for real-time KPI tracking",
+        "Cleaned and transformed large datasets using Python and SQL"
+      ]
+    }
+  ]
 };
 
 const SkillsSection = () => {
@@ -148,34 +160,38 @@ const SkillsSection = () => {
             </CardContent>
           </Card>
 
-          {/* Work Experience */}
-          <Card className="glass neon-border hover-lift">
-            <CardHeader>
-              <div className="flex items-center gap-3 mb-2">
-                <Briefcase className="w-6 h-6 text-secondary" />
-                <CardTitle className="text-xl">Experience</CardTitle>
-              </div>
-              <CardTitle className="text-2xl gradient-text">
-                {experience.work.title}
-              </CardTitle>
-              <CardDescription className="text-base">
-                {experience.work.subtitle}
-              </CardDescription>
-              <div className="text-sm text-muted-foreground">
-                {experience.work.period}
-              </div>
-            </CardHeader>
-            <CardContent>
-              <ul className="space-y-2">
-                {experience.work.achievements.map((achievement, idx) => (
-                  <li key={idx} className="text-sm text-muted-foreground flex items-start">
-                    <span className="text-accent mr-2 mt-1">•</span>
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          {/* Work Experiences */}
+          <div className="space-y-8">
+            {experience.workExperiences.map((work, index) => (
+              <Card key={index} className="glass neon-border hover-lift">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-2">
+                    <Briefcase className="w-6 h-6 text-secondary" />
+                    <CardTitle className="text-xl">Experience</CardTitle>
+                  </div>
+                  <CardTitle className="text-2xl gradient-text">
+                    {work.title}
+                  </CardTitle>
+                  <CardDescription className="text-base">
+                    {work.subtitle}
+                  </CardDescription>
+                  <div className="text-sm text-muted-foreground">
+                    {work.period}
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {work.achievements.map((achievement, idx) => (
+                      <li key={idx} className="text-sm text-muted-foreground flex items-start">
+                        <span className="text-accent mr-2 mt-1">•</span>
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
 
         {/* Certifications */}
