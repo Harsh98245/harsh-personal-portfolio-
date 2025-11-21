@@ -127,9 +127,9 @@ const SkillsSection = () => {
         </div>
 
         {/* Experience Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
           {/* Education */}
-          <Card className="glass neon-border hover-lift">
+          <Card className="glass neon-border hover-lift h-fit">
             <CardHeader>
               <div className="flex items-center gap-3 mb-2">
                 <GraduationCap className="w-6 h-6 text-primary" />
