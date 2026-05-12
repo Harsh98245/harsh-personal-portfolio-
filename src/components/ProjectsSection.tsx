@@ -30,7 +30,7 @@ const projects = [
       "Calibrated probabilities for imbalanced data"
     ],
     gradient: "bg-gradient-secondary",
-    github: "https://github.com/Harsh98245/FraudDetection.git"
+    github: "https://frauddetection-enmgq7m5fpvpw6swmbfnfb.streamlit.app/"
   },
   {
     title: "Smart Parking Management",
