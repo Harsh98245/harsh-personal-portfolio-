@@ -56,7 +56,6 @@ const experience = {
     title: "York University",
     subtitle: "Bachelor of Science (Honours) in Computer Science",
     period: "2022 - 2026",
-    gpa: "CGPA: 3.33/4.0",
     courses: [
       "Cyber Security", "Data Structures", "Computer Organization", 
       "Database Management", "Operating Systems", "Theory of Computation"
