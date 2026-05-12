@@ -140,9 +140,8 @@ const SkillsSection = () => {
               <CardDescription className="text-base">
                 {experience.education.subtitle}
               </CardDescription>
-              <div className="flex justify-between text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground">
                 <span>{experience.education.period}</span>
-                <span className="text-accent">{experience.education.gpa}</span>
               </div>
             </CardHeader>
             <CardContent>
