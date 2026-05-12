@@ -56,7 +56,6 @@ const experience = {
     title: "York University",
     subtitle: "Bachelor of Science (Honours) in Computer Science",
     period: "2022 - 2026",
-    gpa: "CGPA: 3.33/4.0",
     courses: [
       "Cyber Security", "Data Structures", "Computer Organization", 
       "Database Management", "Operating Systems", "Theory of Computation"
@@ -141,9 +140,8 @@ const SkillsSection = () => {
               <CardDescription className="text-base">
                 {experience.education.subtitle}
               </CardDescription>
-              <div className="flex justify-between text-sm text-muted-foreground">
+              <div className="text-sm text-muted-foreground">
                 <span>{experience.education.period}</span>
-                <span className="text-accent">{experience.education.gpa}</span>
               </div>
             </CardHeader>
             <CardContent>
