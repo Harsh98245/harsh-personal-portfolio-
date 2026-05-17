@@ -94,8 +94,17 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.title} 
-              className="glass hover-lift group cursor-pointer neon-border"
+              className={`glass hover-lift group neon-border ${project.github ? 'cursor-pointer' : ''}`}
               style={{ animationDelay: `${index * 0.2}s` }}
+              onClick={() => project.github && window.open(project.github, '_blank')}
+              role={project.github ? 'link' : undefined}
+              tabIndex={project.github ? 0 : undefined}
+              onKeyDown={(e) => {
+                if (project.github && (e.key === 'Enter' || e.key === ' ')) {
+                  e.preventDefault();
+                  window.open(project.github, '_blank');
+                }
+              }}
             >
               <CardHeader className="space-y-4">
                 <div className="flex items-center justify-between">
