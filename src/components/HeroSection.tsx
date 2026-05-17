@@ -58,7 +58,7 @@ const HeroSection = () => {
                 </span>
               </h1>
               <p className="text-2xl md:text-4xl font-inter font-light text-muted-foreground leading-relaxed">
-                Developer & <span className="gradient-analytics">Problem Solver</span>
+                <span className="gradient-analytics">Turning Data into Intelligent Solutions</span>
               </p>
             </div>
           </div>
