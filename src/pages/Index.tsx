@@ -4,12 +4,14 @@ import SkillsSection from '@/components/SkillsSection';
 import BlogSection from '@/components/BlogSection';
 import ContactSection from '@/components/ContactSection';
 import Navigation from '@/components/Navigation';
+import DashboardBackground from '@/components/DashboardBackground';
 
 const Index = () => {
   return (
     <div className="relative">
+      <DashboardBackground />
       <Navigation />
-      
+
       <main className="space-y-0">
         <section id="hero">
           <HeroSection />
