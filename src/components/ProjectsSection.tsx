@@ -117,7 +117,7 @@ const ProjectsSection = () => {
                         variant="ghost" 
                         size="icon" 
                         className="opacity-0 group-hover:opacity-100 transition-opacity"
-                        onClick={() => window.open(project.github, '_blank')}
+                        onClick={(e) => { e.stopPropagation(); window.open(project.github, '_blank'); }}
                       >
                         <Github className="w-4 h-4" />
                       </Button>
