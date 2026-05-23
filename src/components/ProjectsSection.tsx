@@ -5,6 +5,20 @@ import { Github, TrendingUp, Shield, Brain, Car, Heart, BarChart3 } from 'lucide
 
 const projects = [
   {
+    title: "Brand Health Tracker",
+    description: "End-to-end brand analytics platform with NLP sentiment scoring, statistical significance testing, and interactive Streamlit dashboard for competitive benchmarking.",
+    icon: BarChart3,
+    stats: "500+ respondents • 10 tracking periods • 5 CSV formats • 7 brand attributes",
+    technologies: ["Python", "Streamlit", "Plotly", "Scikit-learn", "SHAP", "HuggingFace"],
+    highlights: [
+      "Ingested 5 CSV formats via auto-detection with 90%+ column mapping accuracy",
+      "Deployed HuggingFace NLP pipeline scoring sentiment across 7 brand attributes",
+      "Applied z-tests with Benjamini-Hochberg correction, cutting false discoveries from 18 to under 2",
+      "Shipped 6-tab Streamlit dashboard with KMeans segmentation and SHAP driver analysis"
+    ],
+    gradient: "bg-gradient-primary"
+  },
+  {
     title: "House Price Prediction",
     description: "ML model predicting Canadian property prices with 92% accuracy using advanced feature engineering and ensemble methods.",
     icon: TrendingUp,
@@ -15,7 +29,7 @@ const projects = [
       "5-fold cross-validation with 91.8% consistent accuracy",
       "Reduced missing value errors by 100%"
     ],
-    gradient: "bg-gradient-primary",
+    gradient: "bg-gradient-secondary",
     github: "https://github.com/Harsh98245/-House-Price-Prediction-.git"
   },
   {
