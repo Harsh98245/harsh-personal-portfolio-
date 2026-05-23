@@ -16,7 +16,8 @@ const projects = [
       "Applied z-tests with Benjamini-Hochberg correction, cutting false discoveries from 18 to under 2",
       "Shipped 6-tab Streamlit dashboard with KMeans segmentation and SHAP driver analysis"
     ],
-    gradient: "bg-gradient-primary"
+    gradient: "bg-gradient-primary",
+    github: "https://brandhealthtracker-ew8qv9hdmqxcfg8quscjf4.streamlit.app/"
   },
   {
     title: "House Price Prediction",
