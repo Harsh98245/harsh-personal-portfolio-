@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, TrendingUp, Shield, Brain, Car, Heart } from 'lucide-react';
+import { Github, TrendingUp, Shield, Brain, Car, Heart, BarChart3 } from 'lucide-react';
 
 const projects = [
   {
