@@ -29,7 +29,7 @@ const projects = [
       "5-fold cross-validation with 91.8% consistent accuracy",
       "Reduced missing value errors by 100%"
     ],
-    gradient: "bg-gradient-secondary",
+    gradient: "bg-primary",
     github: "https://github.com/Harsh98245/-House-Price-Prediction-.git"
   },
   {
