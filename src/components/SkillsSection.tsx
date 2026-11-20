@@ -63,21 +63,41 @@ const experience = {
   },
   workExperiences: [
     {
+      title: "Ipsos",
+      subtitle: "Research Analyst",
+      period: "Aug 2026 – Present",
+      achievements: [
+        "Engineered automated ETL pipelines (SQL, Python, VBA) for multi-wave survey tracking, cutting manual processing time by ~25% across 4–5 concurrent client projects",
+        "Wrote SQL and Python (Pandas, NumPy) to clean, validate, and merge large survey datasets; built automated QA checks flagging outliers, straight-liners, and inconsistent responses before delivery",
+        "Applied hypothesis testing (z/t-tests, confidence intervals) to wave-over-wave and subgroup comparisons, separating real shifts from sampling noise",
+        "Built reusable charting and dashboard automation and used LLMs to code open-ended responses; presented to stakeholders, including a major tech client who featured the analysis publicly"
+      ]
+    },
+    {
+      title: "RBC Royal Bank of Canada",
+      subtitle: "Data & Analytics (Contract)",
+      period: "Apr 2026 – Jun 2026",
+      achievements: [
+        "Supported data analytics workflows across banking operations using SQL and Python",
+        "Contributed to reporting pipelines and data quality initiatives within a fast-paced financial environment"
+      ]
+    },
+    {
       title: "Artificial Intelligence Club at York University",
       subtitle: "Artificial Intelligence Researcher",
-      period: "Sept 2024 - Present",
+      period: "Sept 2024 – Aug 2026",
       achievements: [
-        "Collaborated with peers to develop data-driven and AI-powered solutions addressing real-world challenges (Current Project: IntelliAgent - an AI knowledge assistant)",
+        "Collaborated with peers to develop data-driven and AI-powered solutions addressing real-world challenges (Project: IntelliAgent — an AI knowledge assistant using RAG architecture)",
         "Designed and prototyped machine learning models and chat-based systems, contributing to innovative project outcomes",
-        "Participated in coding workshops and collaborative sessions to enhance AI proficiency and promote technical knowledge sharing within the club"
+        "Participated in coding workshops and collaborative sessions to enhance AI proficiency and promote technical knowledge sharing"
       ]
     },
     {
       title: "Paperchase Business Services Ltd.",
       subtitle: "Data Analyst Intern",
-      period: "May 2024 - Aug 2024",
+      period: "May 2024 – Aug 2024",
       achievements: [
-        "Reduced manual reporting effort by 30% with ETL workflows",
+        "Reduced manual reporting effort by 30% with ETL workflows across 5+ automated pipelines",
         "Designed interactive dashboards for real-time KPI tracking",
         "Cleaned and transformed large datasets using Python and SQL"
       ]

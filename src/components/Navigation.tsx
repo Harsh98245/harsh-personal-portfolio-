@@ -67,7 +67,7 @@ const Navigation = () => {
                 Harsh Khandelwal
               </p>
               <p className="text-xs text-muted-foreground">
-                Full Stack Developer
+                Data Scientist & Analyst
               </p>
             </div>
           </div>

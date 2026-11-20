@@ -63,10 +63,10 @@ const Index = () => {
             </div>
             
             <div className="flex justify-center space-x-6">
-              <a href="https://github.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://github.com/Harsh98245" className="text-muted-foreground hover:text-primary transition-colors">
                 GitHub
               </a>
-              <a href="https://linkedin.com" className="text-muted-foreground hover:text-secondary transition-colors">
+              <a href="https://www.linkedin.com/in/harsh-khandelwal-993212295/" className="text-muted-foreground hover:text-secondary transition-colors">
                 LinkedIn
               </a>
               <a href="mailto:harshkhandelwal129@gmail.com" className="text-muted-foreground hover:text-accent transition-colors">
