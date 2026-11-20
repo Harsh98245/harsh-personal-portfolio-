@@ -96,7 +96,7 @@ const HeroSection = () => {
                 asChild 
                 className="data-card border-primary/20 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 hover:scale-105"
               >
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://github.com/Harsh98245" target="_blank"" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Github className="w-5 h-5" />
                   <span className="hidden sm:inline">GitHub</span>
                 </a>
@@ -107,7 +107,7 @@ const HeroSection = () => {
                 asChild 
                 className="data-card border-secondary/20 hover:border-secondary/40 hover:bg-secondary/5 transition-all duration-300 hover:scale-105"
               >
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/harsh-khandelwal-993212295/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                   <Linkedin className="w-5 h-5" />
                   <span className="hidden sm:inline">LinkedIn</span>
                 </a>
